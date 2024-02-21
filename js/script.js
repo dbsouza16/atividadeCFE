@@ -1,5 +1,5 @@
 //efeito do botão voltar ao Topo
-function Topo() {
+function topo() {
     window.scrollTo({
         top: 0, 
         left: 0,
@@ -8,7 +8,7 @@ function Topo() {
 }
 
 //Validação de Login
-function Login() {
+function login() {
     var logado = 0;
     var usuario = document.getElementsByName('usuario') [0].value;
     usuario = usuario.toLowerCase();
