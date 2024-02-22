@@ -4,7 +4,7 @@ function topo() {
         top: 0, 
         left: 0,
         behavior: "smooth"
-    })
+        })
 }
 
 //Validação de Login
@@ -26,7 +26,31 @@ function login() {
 }
 
 //Ativar alert no botão cadastrar
+// function cadastro() {
+//    alert("Cadastrado com sucesso!");
+//    window.location.href = "index.html";
+// }
+
+//Ativar alert no botão cadastrar
+
 function cadastro() {
-    alert("Cadastrado com sucesso!");
-    window.location.href = "index.html";
+
+    // Primeiro procuramos os campos pelo name.
+
+    // Como tem outro usuario e senha acima e contamos a partir do zero, colocamos [1] do lado
+
+    var usuario = document.getElementsByName('usuario')[1].value
+    var email = document.getElementsByName('email')[0].value
+    var senha = document.getElementsByName('senha')[1].value
+
+    // Depois, verificamos se os dados estão diferentes de texto vazio(''), se todos estiverem foram preenchidos
+
+    if(usuario != '' && email != '' && senha != '') {
+        alert("Cadastrado com sucesso!");
+        window.location.href = "index.html";
+    }
+    // Caso um não esteja, mostramos um alerta
+    else {
+        alert("Preencha todos os campos")  
+    }
 }
